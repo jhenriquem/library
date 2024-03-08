@@ -1,6 +1,6 @@
-# Book list 
+# Library
 
-Book list é um aplicativo simples para ajudar os usuários a listar e gerenciar livros lidos e não lidos. Ele permite aos usuários adicionar novos livros à sua lista, fazer pesquisas por título de livro e obter informações sobre os livros usando a API de Livros do Google.
+Library é um aplicativo simples para ajudar os usuários a listar e gerenciar livros lidos e não lidos. Ele permite aos usuários adicionar novos livros à sua lista, fazer pesquisas por título de livro e obter informações sobre os livros usando a API de Livros do Google.
 
 ## Funcionalidades
 
