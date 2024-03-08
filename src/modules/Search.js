@@ -7,14 +7,10 @@ export default class Search {
     const container = document.querySelector(".new-book-search-container");
 
     btn.addEventListener("click", () => {
-      btn.className === "fa-solid fa-plus"
+      btn.classList.contains("add")
         ? container.show()
-        : container.close();
-
-      btn.className =
-        btn.className === "fa-solid fa-plus"
-          ? "fa-solid fa-close"
-          : "fa-solid fa-plus";
+        : UI.closePop_Up(container);
+      UI.animateButtonOpenPop_Up(btn);
     });
   }
 
@@ -23,7 +19,10 @@ export default class Search {
     const btn = document.querySelector("#btn-search-book");
 
     btn.addEventListener("click", () => {
-      console.log(Request.Books(input.value));
+      (async () => {
+        const booksList = await Request.books(input.value);
+        UI.loadSearchResults(booksList);
+      })();
     });
   }
 

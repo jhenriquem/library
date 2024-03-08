@@ -1,24 +1,31 @@
+import UI from "./UI";
+
 export default class Request {
-  static Books(value) {
+  static async books(value) {
     const APIkey = "AIzaSyDW_FQWo6mtRynJ6dUXxah7WednouKMllY";
     const list = [];
 
-    async function search(titleSearched) {
-      const book = await fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=${titleSearched}:keyes&key=${APIkey}`,
+    UI.showLoading();
+    try {
+      const bookResponse = await fetch(
+        `https://www.googleapis.com/books/v1/volumes?q=${value}:keyes&key=${APIkey}`,
       );
 
-      try {
-        const data = await book.json();
+      const data = await bookResponse.json();
 
+      if (data.totalItems > 0) {
         data.items.forEach((book) => {
           list.push(book);
         });
-      } catch {
+      } else {
         list.push("Nenhum livro encontrado");
       }
+
+      UI.hideLoading();
+    } catch (error) {
+      list.push("Não conseguimos pesquisa o seu livro, tente mais tarde");
     }
-    search(value);
+
     return list;
   }
 }
