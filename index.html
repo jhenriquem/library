@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Booklog app</title>
+    <title>Library app</title>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
     <script
       src="https://kit.fontawesome.com/e78161c1f6.js"
@@ -12,12 +12,12 @@
   </head>
   <body>
     <header>
-      <span class="title">Booklog</span>
-      <button class="fa-solid fa-plus" id="btn-add-book"></button>
+      <span class="title">Library</span>
+      <button class="fa-solid fa-plus add" id="btn-add-book"></button>
     </header>
 
     <dialog class="new-book-search-container">
-      <div>
+      <div class="search-bar">
         <input
           class="input"
           type="text"
@@ -27,7 +27,9 @@
         />
         <span class="fa-solid fa-magnifying-glass" id="btn-search-book"></span>
       </div>
-      <div class="list-books-found">-</div>
+      <div class="list-books-found">
+        <i class="fa-solid fa-spinner"></i>
+      </div>
     </dialog>
     <main class="books_grid"></main>
     <script src="main.js"></script>
