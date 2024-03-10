@@ -1,0 +1,84 @@
+@import url("colors.css");
+
+/*--------------------------------------*/
+/* New book search container style      */
+/*--------------------------------------*/
+.book-search-container {
+  width: 400px;
+  min-height: 50px;
+  max-height: 600px;
+  flex-direction: column;
+  justify-content: center;
+  outline: none;
+  align-items: center;
+  box-shadow: 5px 5px 15px var(--shadow);
+  border: 1px solid var(--shadow);
+  border-radius: 5px;
+  overflow: auto;
+}
+
+.book-search-container::backdrop {
+  background-color: transparent;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+}
+.input {
+  outline: none;
+  border: none;
+  width: 90%;
+  font-size: 1.1rem;
+}
+#btn-search-book {
+  cursor: pointer;
+}
+.list-books-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.fa-spinner {
+  animation: load 0.8s linear infinite;
+  display: none;
+}
+
+@keyframes load {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.research-books-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  column-gap: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 10px;
+}
+
+.research-books-card:hover,
+.research-books-card:focus {
+  background-color: #f0f0f0;
+}
+.research-books-card > img {
+  width: 50px;
+  box-shadow: 5px 5px 10px var(--shadow);
+}
+.research-books-card > div {
+  display: block;
+  margin: 10px 0;
+}
+
+.research-books-card > div > legend {
+  font-size: 0.8rem;
+}
