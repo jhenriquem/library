@@ -13,10 +13,10 @@
   <body>
     <header>
       <span class="title">Library</span>
-      <button class="fa-solid fa-plus add" id="btn-add-book"></button>
+      <button class="fa-solid fa-plus add" id="btn-open-search"></button>
     </header>
 
-    <dialog class="new-book-search-container">
+    <dialog class="book-search-container">
       <div class="search-bar">
         <input
           class="input"
@@ -31,6 +31,24 @@
         <i class="fa-solid fa-spinner"></i>
       </div>
     </dialog>
+
+    <dialog class="preview-book">
+      <button class="fa-solid fa-xmark" id="close_preview-book"></button>
+      <img src="" id="img_preview-book" alt="" />
+      <div id="information_preview-book">
+        <h3 id="title_preview-book"></h3>
+        <div>
+          <span id="subtitle_preview-book"></span>
+          <span id="pageCount_preview-book"></span>
+        </div>
+        <div>
+          <span id="authors_preview-book"></span>
+          <span id="reading-status_preview-book">Ler</span>
+        </div>
+        <button id="add-book-list">Adicionar</button>
+      </div>
+    </dialog>
+
     <main class="books_grid"></main>
     <script src="main.js"></script>
   </body>
