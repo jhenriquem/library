@@ -28,4 +28,19 @@ export default class Request {
 
     return list;
   }
+
+  static async specificBook(id) {
+    const APIkey = "AIzaSyDW_FQWo6mtRynJ6dUXxah7WednouKMllY";
+
+    try {
+      const book = await fetch(
+        `https://www.googleapis.com/books/v1/volumes/${id}?key=${APIkey}`,
+      );
+
+      const object = await book.json();
+      return object;
+    } catch {
+      return "Erro";
+    }
+  }
 }

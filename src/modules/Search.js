@@ -3,8 +3,8 @@ import UI from "./UI";
 
 export default class Search {
   static Container() {
-    const btn = document.querySelector("#btn-add-book");
-    const container = document.querySelector(".new-book-search-container");
+    const btn = document.querySelector("#btn-open-search");
+    const container = document.querySelector(".book-search-container");
 
     btn.addEventListener("click", () => {
       btn.classList.contains("add")

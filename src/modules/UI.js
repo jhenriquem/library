@@ -1,3 +1,5 @@
+import Feactures from "./Feactures";
+
 export default class UI {
   static loadSearchResults(list) {
     const listResult = document.querySelector(".list-books-found");
@@ -46,6 +48,7 @@ export default class UI {
     const div = document.createElement("div");
     div.setAttribute("id", id);
     div.classList.add("research-books-card");
+    Feactures.addNewBookOfList(div);
 
     const img = document.createElement("img");
     img.setAttribute("src", coverLink);
@@ -90,5 +93,20 @@ export default class UI {
   }
   static hideLoading() {
     document.querySelector(".fa-spinner").style.display = "none";
+  }
+
+  static loadDataInPreview(object) {
+    const title = document.querySelector("#title_preview-book");
+    const cover = document.querySelector("#img_preview-book");
+    const subtitle = document.querySelector("#subtitle_preview-book");
+    const pageCount = document.querySelector("#pageCount_preview-book");
+    const authors = document.querySelector("#authors_preview-book");
+    const description = document.querySelector("#description_preview-book");
+  }
+
+  static openPreviewBook() {
+    const preview = document.querySelector(".preview-book");
+
+    preview.show();
   }
 }
