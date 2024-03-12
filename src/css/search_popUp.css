@@ -21,6 +21,11 @@
   background-color: transparent;
 }
 
+#not-found-img,
+#erro-img {
+  margin-top: 2rem;
+  width: 90%;
+}
 .search-bar {
   display: flex;
   justify-content: space-between;

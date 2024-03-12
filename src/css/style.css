@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap");
-
 /*--------------------------------------*/
 /* Files import                         */
 /*--------------------------------------*/
@@ -7,11 +5,10 @@
 @import url("colors.css");
 @import url("search_popUp.css");
 @import url("responsive.css");
-@import url("preview_popUp.css");
 /*--------------------------------------*/
 * {
   box-sizing: border-box;
-  font-family: Rubik, sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 body {
@@ -36,7 +33,6 @@ header {
 .title {
   color: var(--text);
   font-size: 2rem;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-weight: 700;
   margin-left: 1rem;
 }
@@ -47,4 +43,43 @@ header {
   font-size: 1rem;
   transition: 0.3s;
   cursor: pointer;
+}
+
+.books_grid {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 2rem;
+}
+
+.there-no-books {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+  flex-direction: column;
+  font-size: 1.2rem;
+}
+.img-there-no-books {
+  width: 50%;
+}
+
+.card-books-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 200px;
+  max-height: 150px;
+  margin: 0 10px;
+}
+
+.card-books-grid > img {
+  width: 90%;
+  border-radius: 5px;
+}
+.card-books-grid > div > legend {
+  color: var(--gray);
+  font-size: 0.8rem;
 }
