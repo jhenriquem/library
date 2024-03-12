@@ -47,6 +47,7 @@ export default class UI {
           ),
         );
       });
+<<<<<<< HEAD
     } else {
       grid.innerHTML = `
       <article class="there-no-books">
@@ -61,6 +62,10 @@ export default class UI {
       `;
     }
 
+=======
+    }
+
+>>>>>>> a5a535035268266415fe52a1e7de9f7cd537dd90
     function cardBook(title, id, status, coverLink, authors) {
       const div = document.createElement("div");
       div.setAttribute("id", id);
@@ -69,19 +74,28 @@ export default class UI {
       const img = document.createElement("img");
       img.setAttribute("src", coverLink);
 
+<<<<<<< HEAD
       const container = document.createElement("div");
+=======
+      const block = document.createElement("div");
+>>>>>>> a5a535035268266415fe52a1e7de9f7cd537dd90
 
       const p = document.createElement("p");
       p.textContent = title;
 
       const legend = document.createElement("legend");
+<<<<<<< HEAD
       if (authors) {
         authors.forEach((author) => (legend.innerHTML += ` <br> ${author}`));
       }
+=======
+      authors.forEach((author) => (legend.innerHTML += ` <br> ${author}`));
+>>>>>>> a5a535035268266415fe52a1e7de9f7cd537dd90
 
       const readingStatus = document.createElement("span");
       readingStatus.setAttribute("id", id);
       readingStatus.textContent = status ? "Lido" : "Ler";
+<<<<<<< HEAD
       Feactures.changeStatusBook(readingStatus);
 
       const Remove = document.createElement("i");
@@ -100,6 +114,15 @@ export default class UI {
 
       div.appendChild(img);
       div.appendChild(container);
+=======
+
+      block.appendChild(p);
+      block.appendChild(legend);
+      block.appendChild(readingStatus);
+
+      div.appendChild(img);
+      div.appendChild(block);
+>>>>>>> a5a535035268266415fe52a1e7de9f7cd537dd90
 
       return div;
     }
