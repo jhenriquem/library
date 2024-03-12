@@ -3,6 +3,7 @@
 .books_grid {
   margin-top: 70px;
   width: 100%;
+  transition: 0.3s;
   display: flex;
   flex-wrap: wrap;
   padding: 10px 2rem;
@@ -23,22 +24,21 @@
   transition: 0.3s;
 }
 .card-books-grid {
-  min-width: 100px;
-  max-width: 300px;
+  width: 120px;
   padding: 10px;
+  margin: 0 10px;
+  flex-direction: column;
   display: flex;
-  column-gap: 10px;
 }
 
 .card-books-grid > img {
-  width: 90px;
+  width: 100%;
   border-radius: 5px;
 }
 
 .card-books-grid > div {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 .card-books-grid > div > p {
   font-size: 0.9rem;
@@ -52,6 +52,7 @@
 .card-books-grid > div > div {
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
 }
 
 .card-books-grid > div > div > span {
@@ -67,6 +68,9 @@
 @media screen and (max-width: 750px) {
   .img-there-no-books {
     width: 70%;
+  }
+  .books_grid {
+    padding: 0px;
   }
 }
 
