@@ -30,7 +30,6 @@ export default class Library {
     }
   }
 
-<<<<<<< HEAD
   changeStatus(id) {
     this.bookcase.forEach((item) => {
       if (item.bookID === id) {
@@ -44,12 +43,6 @@ export default class Library {
     this.bookcase.forEach((item) => {
       if (item.bookID === id) {
         this.bookcase.splice(this.bookcase.indexOf(item), 1);
-=======
-  remove(id) {
-    this.bookcase.forEach((item) => {
-      if (item.id === id) {
-        this.bookcase.split(this.bookcase.indexOf(item), 1);
->>>>>>> a5a535035268266415fe52a1e7de9f7cd537dd90
         this.update();
       }
     });
