@@ -1,10 +1,9 @@
 export default class Book {
-  constructor(title, author, npages, status, description, bookID) {
+  constructor(title, authors, status, bookID, coverLink) {
     this.title = title;
-    this.author = author;
-    this.npages = npages;
+    this.authors = authors;
     this.status = status;
-    this.description = description;
     this.bookID = bookID;
+    this.coverLink = coverLink;
   }
 }

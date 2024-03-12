@@ -1,0 +1,77 @@
+@import url("colors.css");
+
+.books_grid {
+  margin-top: 70px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 2rem;
+}
+
+.there-no-books {
+  display: flex;
+  width: 100%;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+  flex-direction: column;
+  font-size: 1.2rem;
+}
+.img-there-no-books {
+  width: 40%;
+  transition: 0.3s;
+}
+.card-books-grid {
+  min-width: 100px;
+  max-width: 300px;
+  padding: 10px;
+  display: flex;
+  column-gap: 10px;
+}
+
+.card-books-grid > img {
+  width: 90px;
+  border-radius: 5px;
+}
+
+.card-books-grid > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-books-grid > div > p {
+  font-size: 0.9rem;
+}
+
+.card-books-grid > div > legend {
+  color: var(--gray);
+  font-size: 0.8rem;
+}
+
+.card-books-grid > div > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-books-grid > div > div > span {
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.card-books-grid > div > div > i {
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+@media screen and (max-width: 750px) {
+  .img-there-no-books {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .img-there-no-books {
+    width: 90%;
+  }
+}
