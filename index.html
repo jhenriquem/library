@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library app</title>
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
     <script
       src="https://kit.fontawesome.com/e78161c1f6.js"
       crossorigin="anonymous"
@@ -13,7 +13,7 @@
   <body>
     <header>
       <span class="title">Library</span>
-      <button class="fa-solid fa-plus add" id="btn-open-search"></button>
+      <button class="fa-solid fa-plus open" id="btn-open-search"></button>
     </header>
 
     <dialog class="book-search-container">
@@ -32,24 +32,16 @@
       </div>
     </dialog>
 
-    <dialog class="preview-book">
-      <button class="fa-solid fa-xmark" id="close_preview-book"></button>
-      <img src="" id="img_preview-book" alt="" />
-      <div id="information_preview-book">
-        <h3 id="title_preview-book"></h3>
-        <div>
-          <span id="subtitle_preview-book"></span>
-          <span id="pageCount_preview-book"></span>
-        </div>
-        <div>
-          <span id="authors_preview-book"></span>
-          <span id="reading-status_preview-book">Ler</span>
-        </div>
-        <button id="add-book-list">Adicionar</button>
-      </div>
-    </dialog>
-
-    <main class="books_grid"></main>
+    <main class="books_grid">
+      <article class="there-no-books">
+        Não há livros na sua lista
+        <img
+          src="images/no-books-in-list.svg"
+          class="img-there-no-books"
+          alt=""
+        />
+      </article>
+    </main>
     <script src="main.js"></script>
   </body>
 </html>
