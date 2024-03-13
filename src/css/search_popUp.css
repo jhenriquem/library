@@ -36,9 +36,13 @@
   width: 90%;
   font-size: 1.1rem;
 }
+
 #btn-search-book {
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
+
 .list-books-found {
   display: flex;
   flex-direction: column;

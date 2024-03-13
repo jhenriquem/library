@@ -38,7 +38,7 @@ export default class Feactures {
   static changeStatusBook(element) {
     element.addEventListener("click", () => {
       Storage.getLibrary().changeStatus(element.id);
-      UI.grid();
+      UI.reloadBookCard(element);
     });
   }
 }

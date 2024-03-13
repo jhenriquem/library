@@ -30,6 +30,10 @@ export default class UI {
     document.querySelector(".fa-spinner").style.display = "none";
   }
 
+  static reloadBookCard(element) {
+    element.innerText = element.innerText === "Ler" ? "Lido" : "Ler";
+  }
+
   static grid() {
     const bookcase = Storage.getLibrary().getBookCase();
     const grid = document.querySelector(".books_grid");
@@ -54,10 +58,9 @@ export default class UI {
         <img
           src="images/no-books-in-list.svg"
           class="img-there-no-books"
-          alt=""
+          alt="img there no books"
         />
       </article>
-
       `;
     }
 
@@ -67,7 +70,10 @@ export default class UI {
       div.classList.add("card-books-grid");
 
       const img = document.createElement("img");
-      img.setAttribute("src", coverLink);
+
+      img.setAttribute("src", !coverLink ? "images/no-page.png" : coverLink);
+
+      img.setAttribute("alt", `Cover book ${title}`);
 
       const container = document.createElement("div");
       const block = document.createElement("div");
