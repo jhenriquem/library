@@ -2,7 +2,7 @@ import UI from "./UI";
 
 export default class Request {
   static async books(value) {
-    const APIkey = "AIzaSyDW_FQWo6mtRynJ6dUXxah7WednouKMllY";
+    const APIkey = "";
     const list = [];
 
     UI.showLoading();
